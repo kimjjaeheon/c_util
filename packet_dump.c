@@ -20,10 +20,13 @@ void packet_dump(char* buf, int size, int unit)
 	{
 		if((i%unit) == 0)
 			memset((tmp+0), 0x20, ((unit*3)+unit+1+7+3));
+
 		if(j == 7)
 			sprintf((tmp+0), "[%4d] ", lno);
+
 		sprintf((tmp+j), "%02x", (unsigned char)*(buf+i));
 		tmp[j+2] = 0x20;
+
 		if((unsigned char)*(buf+i) >= (unsigned char)*(buf+i))
 			tmp[(j/3)+(unit*3)+1+6] = *(buf+i);
 		else

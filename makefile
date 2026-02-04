@@ -2,8 +2,10 @@ TARGET = c_util.a
 
 CFLAGS = -g
 CC = gcc
-SOURCES = alloc_wrapper.c 
-HEADERS = alloc_wrapper.h 
+SOURCES = alloc_wrapper.c \
+					packet_dump.c
+HEADERS = alloc_wrapper.h \
+					packet_dump.h
 
 all: $(TARGET)
 
